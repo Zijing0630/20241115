@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">洪子淨的個人網站</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">其他小建議</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首頁橫幅區塊 -->
+    <header class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="container">
+            <h1 class="display-4">歡迎來到我的網站</h1>
+            <p class="lead">準備好探索我的世界了嗎</p>
+            <a href="#about" class="btn btn-primary btn-lg">了解更多</a>
+        </div>
+    </header>
+
+    <!-- 關於我區塊 -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>關於我</h2>
+            <p class="lead">Something about me</p>
+        </div>
+    </section>
+
+    <!-- 作品集區塊 -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <i class="bi bi-globe service-icon"></i>
+                        <h3>影片製作</h3>
+                        <p>基本上都是作業</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <i class="bi bi-gear service-icon"></i>
+                        <h3>繪圖作品</h3>
+                        <p>一些高中到大學我比較滿意的電繪作品</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <i class="bi bi-bar-chart service-icon"></i>
+                        <h3>一點點3D</h3>
+                        <p>真的只有一點點</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 其他小事區塊 -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>其他小建議</h2>
+            <p class="lead">我很樂意聽到你的意見喔~</p>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="姓名" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="電子郵件" required>
+                </div>
+                <div class="col-12">
+                    <textarea class="form-control" rows="5" placeholder="訊息" required></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">發送訊息</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 本人保留所有修改權利</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
