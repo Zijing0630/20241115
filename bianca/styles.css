@@ -88,3 +88,16 @@ footer {
 footer p {
     margin: 0;
 }
+
+/*了解按鈕顏色定義*/
+.custom-btn {
+    background-color: #7ca3ff; /* 藍色 */
+    color: white; /* 按鈕文字顏色 */
+    border: none; /* 去除邊框 */
+}
+.custom-btn:hover {
+    background-color: #638df0; /* 滑鼠懸停時的顏色 */
+    color: white; /* 按鈕文字顏色 */
+}
+
+
