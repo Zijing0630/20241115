@@ -1,113 +1,114 @@
 /* 全局樣式 */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: Arial, sans-serif; /* 設定全局字體 */
+    line-height: 1.6; /* 增加行高，提升閱讀性 */
 }
 
 h1, h2, h3 {
-    font-weight: bold;
-    margin-bottom: 15px;
+    font-weight: bold; /* 設定標題字體加粗 */
+    margin-bottom: 15px; /* 標題與下方內容的間距 */
 }
 
 p {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* 段落與下方內容的間距 */
 }
 
 /* 導覽列樣式 */
 .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.5rem; /* 設定品牌名稱字體大小 */
+    font-weight: bold; /* 加粗品牌名稱 */
 }
 
 .navbar-nav .nav-link {
-    margin-right: 15px;
-    transition: color 0.3s;
+    margin-right: 15px; /* 每個導航連結的間距 */
+    transition: color 0.3s; /* 滑鼠移入時的顏色漸變效果 */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #7ca3ff;
+    color: #7ca3ff; /* 滑鼠懸停時的文字顏色 */
 }
 
 /* 首頁橫幅區塊樣式 */
 .hero-section {
-    background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-image: url("/bianca/images/header002.jpg"); /* 設定首頁橫幅的背景圖片 */
+    height: 100vh; /* 全屏高度 */
+    color: rgb(255, 255, 255); /* 文字顏色為白色 */
+    text-shadow: 2px 2px 5px rgb(0, 15, 90); /* 文字陰影效果 */
 }
 
 .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 3rem; /* 首頁標題字體大小 */
+    margin-bottom: 20px; /* 標題與下方內容的間距 */
 }
 
 .hero-section .btn {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* 按鈕文字大小 */
 }
 
 /* 關於我們區塊樣式 */
 #about {
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* 設定區塊背景顏色 */
 }
 
 #about h2 {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* 標題與下方內容的間距 */
 }
 
 /* 服務項目區塊樣式 */
 #services .service-box {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #ffffff;
-    transition: transform 0.3s;
+    padding: 20px; /* 內邊距，確保內容不貼近邊框 */
+    border: 1px solid #ddd; /* 灰色邊框 */
+    border-radius: 10px; /* 圓角邊框 */
+    background: #ffffff; /* 白色背景 */
+    transition: transform 0.3s; /* 增加浮動動畫效果 */
 }
 
 #services .service-box:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* 滑鼠懸停時向上移動 */
 }
 
 .service-icon {
-    font-size: 3rem;
-    color: #7ca3ff;
-    margin-bottom: 15px;
+    font-size: 3rem; /* 圖標大小 */
+    color: #7ca3ff; /* 圖標顏色 */
+    margin-bottom: 15px; /* 圖標與標題的間距 */
 }
 
 /* 聯絡我們區塊樣式 */
 #contact textarea {
-    resize: none;
+    resize: none; /* 禁止調整文字框大小 */
 }
 
 /* 頁腳樣式 */
 footer {
-    background-color: #39628b;
-    color: #39628b;
-    padding: 10px 0;
+    background-color: #39628b; /* 頁腳背景顏色 */
+    color: #39628b; /* 頁腳文字顏色 */
+    padding: 10px 0; /* 上下內邊距 */
 }
 
 footer p {
-    margin: 0;
+    margin: 0; /* 移除段落的默認間距 */
 }
 
-/*了解按鈕顏色定義*/
+/* 自訂按鈕樣式 */
 .custom-btn {
-    background-color: #7ca3ff; /* 藍色 */
+    background-color: #7ca3ff; /* 按鈕背景顏色 */
     color: white; /* 按鈕文字顏色 */
-    border: none; /* 去除邊框 */
-}
-.custom-btn:hover {
-    background-color: #638df0; /* 滑鼠懸停時的顏色 */
-    color: white; /* 按鈕文字顏色 */
+    border: none; /* 去除按鈕邊框 */
 }
 
+.custom-btn:hover {
+    background-color: #638df0; /* 滑鼠懸停時的背景顏色 */
+    color: white; /* 按鈕文字顏色保持不變 */
+}
+
+/* Tab 樣式 */
 .tab-pane {
-    opacity: 0;
-    transform: scale(0.95);
-    transition: all 0.3s ease-in-out;
+    opacity: 0; /* 預設不可見 */
+    transform: scale(0.95); /* 預設縮小尺寸 */
+    transition: all 0.3s ease-in-out; /* 過渡效果 */
 }
 
 .tab-pane.active {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 1; /* 啟用的 Tab 完全可見 */
+    transform: scale(1); /* 啟用的 Tab 恢復原始尺寸 */
 }
-
