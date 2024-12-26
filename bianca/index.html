@@ -72,11 +72,26 @@
         </ul>
 
         <!-- Tab 內容 -->
-        <div class="tab-content mt-4">
+        <div id="content-1" class="tab-content mt-4">
             <!-- 影片製作內容 -->
             <div class="tab-pane fade show active" id="content-1" role="tabpanel" aria-labelledby="tab-1">
-                <div class="row">
+                <div class="row" id="video">
+
+                    <div v-for="item in video" class="col-md-4 text-center">
+                        <a href="item.yt" target="_blank">
+                            <div class="service-box">
+                                <img :src="'/bianca/images/'+item.img" class="card-img-top" alt="作品圖片">
+                                <i class="bi bi-globe service-icon"></i>
+                                <h3>{{item.title}}</h3>
+                                <p>{{item.text}}</p>
+                            </div>
+                        </a>
+                    </div>    
+
+
                     <!-- 每一項內容使用 Bootstrap 的網格系統來布局 -->
+
+<!--
                     <div class="col-md-4 text-center">
                         <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank">
                             <div class="service-box">
@@ -107,13 +122,25 @@
                             </div>
                         </a>
                     </div>
+-->
                 </div>
             </div>
             
             <!-- 繪圖作品內容 -->
             <div class="tab-pane fade" id="content-2" role="tabpanel" aria-labelledby="tab-2">
-                <div class="row">
-                    <div class="col-md-4 text-center">
+                <div class="row" id="IMG">
+                    <div v-for="item in IMG" class="col-md-4 text-center">
+                            <div class="service-box">
+                                <img :src="'/bianca/images/'+item.pic" class="card-img-top" alt="作品圖片">
+                                <i class="bi bi-gear service-icon"></i>
+                                <h3>{{item.title}}</h3>
+                                <p>{{item.text}}</p>
+                            </div>
+                        </a>
+                    </div>  
+
+
+<!--                <div class="col-md-4 text-center">
                         <div class="service-box">
                             <img src="/bianca/images/img001.JPG" class="card-img-top" alt="作品圖片">
                             <i class="bi bi-gear service-icon"></i>
@@ -208,7 +235,9 @@
                             <h3>繪圖作品12</h3>
                             <p>大一基礎設計的色彩調和</p>
                         </div>
-                    </div>
+                    </div>*/
+-->
+
                 </div>
             </div>
             <!-- 3D作品內容 -->
@@ -302,6 +331,8 @@
 
     <!-- 引入 Bootstrap 的 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="Script.js"></script>
+    <script src="vue.js"></script>
 </body>
 </html>
