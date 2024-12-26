@@ -177,7 +177,7 @@
                             <img src="/bianca/images/img005.jpg" class="card-img-top" alt="作品圖片">
                             <i class="bi bi-gear service-icon"></i>
                             <h3>繪圖作品5</h3>
-                            <p>大一會話課的動作拆解</p>
+                            <p>大一繪話課的動作拆解</p>
                         </div>
                     </div>   
                     <div class="col-md-4 text-center">
@@ -242,8 +242,19 @@
             </div>
             <!-- 3D作品內容 -->
             <div class="tab-pane fade" id="content-3" role="tabpanel" aria-labelledby="tab-3">
-                <div class="row">
-                    <div class="col-md-4 text-center">
+                <div class="row" id="mod">
+                    <div v-for="item in mod" class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img :src="'/bianca/images/'+item.view" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.text}}</p>
+                        </div>
+                    </a>
+                </div>  
+
+                    
+ <!--                   <div class="col-md-4 text-center">
                         <div class="service-box">
                             <img src="/bianca/images/img014.jpg" class="card-img-top" alt="作品圖片">
                             <i class="bi bi-bar-chart service-icon"></i>
@@ -291,6 +302,7 @@
                             <p>武器渲染</p>
                         </div>
                     </div>
+-->
                     <!-- 更多作品內容 -->
                 </div>
             </div>
