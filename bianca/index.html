@@ -1,178 +1,278 @@
-<style>
-    /* 視差容器樣式 */
-    .parallax-container {
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-        perspective: 1px;
-    }
-    
-    /* 每一層的視差樣式 */
-    .parallax-layer {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 120%; /* 確保滾動時無縫顯示 */
-        transform: translate3d(0, 0, 0);
-    }
-    
-    .parallax-layer img {
-        width: 100%;
-        height: auto;
-    }
-    </style>    
-
-    <!-- 作品集區塊 -->
-    <section id="services" class="py-5 bg-light">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <!-- 引入 Bootstrap 樣式表，用於快速建立響應式網頁 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定義樣式，定義額外的視覺效果 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 導覽列區塊 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <!-- Tab 選項 -->
-            <ul class="nav nav-tabs justify-content-center" id="serviceTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <!-- Tab 1：影片製作 -->
-                    <button class="nav-link active" id="tab-1" data-bs-toggle="tab" data-bs-target="#content-1" type="button" role="tab" aria-controls="content-1" aria-selected="true">影片製作</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <!-- Tab 2：繪圖作品 -->
-                    <button class="nav-link" id="tab-2" data-bs-toggle="tab" data-bs-target="#content-2" type="button" role="tab" aria-controls="content-2" aria-selected="false">繪圖作品</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <!-- Tab 3：其他作品 -->
-                    <button class="nav-link" id="tab-3" data-bs-toggle="tab" data-bs-target="#content-3" type="button" role="tab" aria-controls="content-3" aria-selected="false">其他作品</button>
-                </li>
-            </ul>
-    
-            <!-- Tab 內容 -->
-            <div class="tab-content mt-4">
-                <!-- 影片製作內容 -->
-                <div class="tab-pane fade show active" id="content-1" role="tabpanel" aria-labelledby="tab-1">
-                    <div class="row">
-                        <!-- 每一項內容使用 Bootstrap 的網格系統來布局 -->
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <i class="bi bi-globe service-icon"></i>
-                                <h3>影片製作</h3>
-                                <p>基本上都是作業1</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <i class="bi bi-globe service-icon"></i>
-                                <h3>影片製作</h3>
-                                <p>基本上都是作業2</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <i class="bi bi-globe service-icon"></i>
-                                <h3>影片製作</h3>
-                                <p>基本上都是作業3</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 繪圖作品內容 -->
-                <div class="tab-pane fade" id="content-2" role="tabpanel" aria-labelledby="tab-2">
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <img src="/bianca/images/IMG_0170.JPG" class="card-img-top" alt="作品圖片">
-                                <i class="bi bi-gear service-icon"></i>
-                                <h3>繪圖作品</h3>
-                                <p>一些高中到大學我比較滿意的電繪作品1</p>
-                            </div>
-                        </div>               
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <img src="/bianca/images/寶貝生日圖.JPG" class="card-img-top" alt="作品圖片">
-                                <i class="bi bi-gear service-icon"></i>
-                                <h3>繪圖作品</h3>
-                                <p>一些高中到大學我比較滿意的電繪作品2</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <img src="/bianca/images/IMG_0177.JPG" class="card-img-top" alt="作品圖片">
-                                <i class="bi bi-gear service-icon"></i>
-                                <h3>繪圖作品</h3>
-                                <p>一些高中到大學我比較滿意的電繪作品3</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <img src="/bianca/images/角色1.jpg" class="card-img-top" alt="作品圖片">
-                                <i class="bi bi-gear service-icon"></i>
-                                <h3>繪圖作品</h3>
-                                <p>一些高中到大學我比較滿意的電繪作品4</p>
-                            </div>
-                        </div>      
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <img src="/bianca/images/打鬥.jpg" class="card-img-top" alt="作品圖片">
-                                <i class="bi bi-gear service-icon"></i>
-                                <h3>繪圖作品</h3>
-                                <p>一些高中到大學我比較滿意的電繪作品5</p>
-                            </div>
-                        </div>      
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <img src="/bianca/images/動物.jpg" class="card-img-top" alt="作品圖片">
-                                <i class="bi bi-gear service-icon"></i>
-                                <h3>繪圖作品</h3>
-                                <p>一些高中到大學我比較滿意的電繪作品6</p>
-                            </div>
-                        </div>      
-                    </div>
-                </div>
+            <a class="navbar-brand" href="#">洪子淨的個人網站</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">其他小建議</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-                <!-- 其他作品內容 -->
-                <div class="tab-pane fade" id="content-3" role="tabpanel" aria-labelledby="tab-3">
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <i class="bi bi-bar-chart service-icon"></i>
-                                <h3>一點點3D</h3>
-                                <p>真的只有一點點1</p>
-                            </div>
+    <!-- 首頁橫幅區塊 -->
+    <header class="hero-section d-flex align-items-center justify-content-center text-center parallax-container">
+        <div class="container position-relative">
+            <h1 class="display-4 text-white">歡迎來到我的網站</h1>
+            <p class="lead text-white">準備好探索我的世界了嗎</p>
+            <a href="#about" class="btn btn-lg custom-btn">了解更多</a>
+        </div>
+            <!-- 手 -->
+            <div class="parallax-layer" data-speed="0.6"></div>
+            <!-- 兔子 -->
+            <div class="parallax-layer" data-speed="0.8"></div>
+            <!-- 人 -->
+            <div class="parallax-layer" data-speed="1"></div>
+            <!-- 背景 -->
+            <div class="parallax-layer" data-speed="0"></div>
+        <!-- 文字內容 -->
+    </header>
+
+    <!-- 關於我區塊 -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>關於我</h2>
+            <p class="lead">Something about me</p>
+        </div>
+    </section>
+
+   <!-- 作品集區塊 -->
+   <section id="services" class="py-5 bg-light">
+    <div class="container">
+        <!-- Tab 選項 -->
+        <ul class="nav nav-tabs justify-content-center" id="serviceTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <!-- Tab 1：影片製作 -->
+                <button class="nav-link active" id="tab-1" data-bs-toggle="tab" data-bs-target="#content-1" type="button" role="tab" aria-controls="content-1" aria-selected="true">影片製作</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <!-- Tab 2：繪圖作品 -->
+                <button class="nav-link" id="tab-2" data-bs-toggle="tab" data-bs-target="#content-2" type="button" role="tab" aria-controls="content-2" aria-selected="false">繪圖作品</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <!-- Tab 3：其他作品 -->
+                <button class="nav-link" id="tab-3" data-bs-toggle="tab" data-bs-target="#content-3" type="button" role="tab" aria-controls="content-3" aria-selected="false">其他作品</button>
+            </li>
+        </ul>
+
+        <!-- Tab 內容 -->
+        <div class="tab-content mt-4">
+            <!-- 影片製作內容 -->
+            <div class="tab-pane fade show active" id="content-1" role="tabpanel" aria-labelledby="tab-1">
+                <div class="row">
+                    <!-- 每一項內容使用 Bootstrap 的網格系統來布局 -->
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <i class="bi bi-globe service-icon"></i>
+                            <h3>影片製作</h3>
+                            <p>基本上都是作業1</p>
                         </div>
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <i class="bi bi-bar-chart service-icon"></i>
-                                <h3>一點點3D</h3>
-                                <p>真的只有一點點2</p>
-                            </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <i class="bi bi-globe service-icon"></i>
+                            <h3>影片製作</h3>
+                            <p>基本上都是作業2</p>
                         </div>
-                        <div class="col-md-4 text-center">
-                            <div class="service-box">
-                                <i class="bi bi-bar-chart service-icon"></i>
-                                <h3>一點點3D</h3>
-                                <p>真的只有一點點3</p>
-                            </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <i class="bi bi-globe service-icon"></i>
+                            <h3>影片製作</h3>
+                            <p>基本上都是作業3</p>
                         </div>
-                        <!-- 更多作品內容 -->
                     </div>
                 </div>
             </div>
+            
+            <!-- 繪圖作品內容 -->
+            <div class="tab-pane fade" id="content-2" role="tabpanel" aria-labelledby="tab-2">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img001.JPG" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品1</p>
+                        </div>
+                    </div>               
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img002.JPG" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品2</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img003.JPG" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品3</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img004.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品4</p>
+                        </div>
+                    </div>      
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img005.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品4</p>
+                        </div>
+                    </div>   
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img006.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品6</p>
+                        </div>
+                    </div>    
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img007.gif" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品7</p>
+                        </div>
+                    </div>  
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img008.gif" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品8</p>
+                        </div>
+                    </div>   
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img009.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品9</p>
+                        </div>
+                    </div>   
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img010.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品10</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img011.png" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品11</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img012.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品</h3>
+                            <p>一些高中到大學我比較滿意的電繪作品12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 其他作品內容 -->
+            <div class="tab-pane fade" id="content-3" role="tabpanel" aria-labelledby="tab-3">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img014.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D</h3>
+                            <p>真的只有一點點1</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img015.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D</h3>
+                            <p>真的只有一點點2</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img016.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D</h3>
+                            <p>真的只有一點點3</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img017.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D</h3>
+                            <p>真的只有一點點4</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img018.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D</h3>
+                            <p>真的只有一點點5</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img019.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D</h3>
+                            <p>真的只有一點點6</p>
+                        </div>
+                    </div>
+                    <!-- 更多作品內容 -->
+                </div>
+            </div>
         </div>
-    </section>
-    
+    </div>
+</section>
+
     <!-- 其他小建議區塊 -->
     <section id="contact" class="py-5">
         <div class="container text-center">
             <h2>其他小建議</h2>
-            <p class="lead">我很樂意聽到你的意見喔~</p>
-            <!-- 表單 -->
             <form class="row g-3">
-                <!-- 姓名欄位 -->
                 <div class="col-md-6">
                     <input type="text" class="form-control" placeholder="姓名" required>
                 </div>
-                <!-- 電子郵件欄位 -->
                 <div class="col-md-6">
                     <input type="email" class="form-control" placeholder="電子郵件" required>
                 </div>
                 <!-- 訊息欄位 -->
+
                 <div class="col-12">
                     <textarea class="form-control" rows="5" placeholder="訊息" required></textarea>
                 </div>
@@ -186,13 +286,13 @@
 
     <!-- 聯絡方式 -->
     <footer class="text-white text-center py-3">
-        <!-- 聯絡信息 -->
-        <p>&copy; 電話:0928329170 </p>
-        <p>&copy; email:hongzijing0630@gmail.com </p>
-        <p>&copy; IG:bianca_06_30 </p>
+        <p>&copy; 電話:0928329170</p>
+        <p>&copy; email:hongzijing0630@gmail.com</p>
+        <p>&copy; IG:bianca_06_30</p>
     </footer>
 
     <!-- 引入 Bootstrap 的 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Script.js"></script>
 </body>
 </html>

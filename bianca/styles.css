@@ -30,7 +30,7 @@ p {
 
 /* 首頁橫幅區塊樣式 */
 .hero-section {
-    background-image: url("/bianca/images/header002.jpg"); /* 設定首頁橫幅的背景圖片 */
+    background-image: url(/bianca/images/IMG-1.png); /* 設定首頁橫幅的背景圖片 */
     height: 100vh; /* 全屏高度 */
     color: rgb(255, 255, 255); /* 文字顏色為白色 */
     text-shadow: 2px 2px 5px rgb(0, 15, 90); /* 文字陰影效果 */
@@ -113,5 +113,74 @@ footer p {
     transform: scale(1); /* 啟用的 Tab 恢復原始尺寸 */
 }
 
+/* 視差容器樣式 */
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1px;
+}
+
+/* 每一層的視差樣式 */
+.parallax-layer {
+   position: absolute;
+   /* top: 0;
+    left: 0;*/
+    width: 100%;
+    height: 120%; /* 確保滾動時無縫顯示 */
+    transform: translate3d(0, 0, 0);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.parallax-layer img {
+    width: 100%;
+    height: 100%; /* 全屏高度 */
+}
 
 
+/* 背景 */
+.parallax-layer:nth-child(1) {
+    background-image: url('/bianca/images/IMG-1.png');
+    position: absolute; /* 絕對定位 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+}
+
+/* 手 */
+.parallax-layer:nth-child(2) {
+    background-image: url('/bianca/images/IMG-2.png');
+    position: absolute; /* 絕對定位 */
+    top: -30;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+}
+
+/* 兔子 */
+.parallax-layer:nth-child(3) {
+    background-image: url('/bianca/images/IMG-3.png');
+    position: absolute; /* 絕對定位 */
+    top: -15%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+/* 人 */
+.parallax-layer:nth-child(4) {
+    background-image: url('/bianca/images/IMG-4.png');
+    position: absolute; /* 絕對定位 */
+    top: -5%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
