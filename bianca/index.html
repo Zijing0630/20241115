@@ -1,59 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Website</title>
-    <!-- 引入 Bootstrap 樣式表，用於快速建立響應式網頁 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- 引入自定義樣式，定義額外的視覺效果 -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- 導覽列區塊 -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <!-- 網站品牌名稱 -->
-            <a class="navbar-brand" href="#">洪子淨的個人網站</a>
-            <!-- 移動端的切換按鈕 -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- 導覽列連結 -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <!-- 連結到 "關於我" 區塊 -->
-                    <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
-                    <!-- 連結到 "作品集" 區塊 -->
-                    <li class="nav-item"><a class="nav-link" href="#services">作品集</a></li>
-                    <!-- 連結到 "其他小建議" 區塊 -->
-                    <li class="nav-item"><a class="nav-link" href="#contact">其他小建議</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 首頁橫幅區塊 -->
-    <header class="hero-section d-flex align-items-center justify-content-center text-center">
-        <div class="container">
-            <!-- 首頁主標題 -->
-            <h1 class="display-4">歡迎來到我的網站</h1>
-            <!-- 簡短描述文字 -->
-            <p class="lead">準備好探索我的世界了嗎</p>
-            <!-- 連結按鈕，指向 "關於我" 區塊 -->
-            <a href="#about" class="btn btn-lg custom-btn">了解更多</a>
-        </div>
-    </header>
-
-    <!-- 關於我區塊 -->
-    <section id="about" class="py-5">
-        <div class="container text-center">
-            <!-- 區塊標題 -->
-            <h2>關於我</h2>
-            <!-- 簡短自我介紹 -->
-            <p class="lead">Something about me</p>
-        </div>
-    </section>
+<style>
+    /* 視差容器樣式 */
+    .parallax-container {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        perspective: 1px;
+    }
+    
+    /* 每一層的視差樣式 */
+    .parallax-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%; /* 確保滾動時無縫顯示 */
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .parallax-layer img {
+        width: 100%;
+        height: auto;
+    }
+    </style>    
 
     <!-- 作品集區塊 -->
     <section id="services" class="py-5 bg-light">
