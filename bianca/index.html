@@ -72,13 +72,13 @@
         </ul>
 
         <!-- Tab 內容 -->
-        <div id="content-1" class="tab-content mt-4">
+        <div class="tab-content mt-4">
             <!-- 影片製作內容 -->
             <div class="tab-pane fade show active" id="content-1" role="tabpanel" aria-labelledby="tab-1">
                 <div class="row" id="video">
 
                     <div v-for="item in video" class="col-md-4 text-center">
-                        <a href="item.yt" target="_blank">
+                        <a :href="item.yt" target="_blank">
                             <div class="service-box">
                                 <img :src="'/bianca/images/'+item.img" class="card-img-top" alt="作品圖片">
                                 <i class="bi bi-globe service-icon"></i>
@@ -93,7 +93,7 @@
 
 <!--
                     <div class="col-md-4 text-center">
-                        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank">
+                        <a href="https://www.youtube.com/embed/HRIaX4__Wy0?si=Kem-gSgFGZiTmxL9" target="_blank">
                             <div class="service-box">
                                 <img src="/bianca/images/img020.jpg" class="card-img-top" alt="作品圖片">
                                 <i class="bi bi-globe service-icon"></i>
@@ -113,7 +113,7 @@
                         </a>
                     </div>
                     <div class="col-md-4 text-center">
-                        <a href="https://www.youtube.com/embed/DUwa3HBOJVg?si=FIBSTi4a0kKN-upg" target="_blank">
+                        <a href="https://www.youtube.com/embed/DUwa3HBOJVg?si=-uH0RuyfQJ8gIIxu" target="_blank">
                             <div class="service-box">
                                 <img src="/bianca/images/img022.jpg" class="card-img-top" alt="作品圖片">
                                 <i class="bi bi-globe service-icon"></i>
