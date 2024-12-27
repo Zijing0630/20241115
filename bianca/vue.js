@@ -6,7 +6,7 @@ var data1 = createApp({
             video:[
                 {yt:"https://www.youtube.com/watch?v=YOUR_VIDEO_ID",img:"img020.jpg",title:"影片製作1",text:"血藍風暴宣傳片"},
                 {yt:"https://www.youtube.com/embed/XgYEqyGPY-0?si=gYDRgxibB3xOuCDQ",img:"img021.jpg",title:"影片製作2",text:"水的旅行-手翻書"},
-                {yt:"https://www.youtube.com/embed/DUwa3HBOJVg?si=TBP-0qAyBzDNfBZV",img:"img022.jpg",title:"影片製作3",text:"自畫像拼豆"},
+                {yt:"https://www.youtube.com/embed/DUwa3HBOJVg?si=FIBSTi4a0kKN-upg",img:"img022.jpg",title:"影片製作3",text:"自畫像拼豆"},
 
             ]
         }
