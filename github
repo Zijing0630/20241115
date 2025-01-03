@@ -1,2 +1,27 @@
 git config --global user.name Zijing0630
 git config --global user.email hongzijing0630@gmail.com
+
+
+    <!-- 其他小建議區塊 -->
+
+   <!--  <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>其他小建議</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="姓名" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="電子郵件" required>
+                </div>
+
+                <div class="col-12">
+                    <textarea class="form-control" rows="5" placeholder="訊息" required></textarea>
+                </div>
+               
+                <div class="col-12">
+                    <button type="submit" class="btn btn-lg custom-btn">發送訊息</button>
+                </div>
+            </form>
+        </div>
+    </section>-->
