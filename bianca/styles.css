@@ -30,7 +30,7 @@ p {
 
 /* 首頁橫幅區塊樣式 */
 .hero-section {
-    background-image: url(/bianca/images/IMG-1.png); /* 設定首頁橫幅的背景圖片 */
+    background-image: url(/images/IMG-1.png); /* 設定首頁橫幅的背景圖片 */
     height: 100vh; /* 全屏高度 */
     color: rgb(255, 255, 255); /* 文字顏色為白色 */
     text-shadow: 2px 2px 5px rgb(0, 15, 90); /* 文字陰影效果 */
@@ -143,7 +143,7 @@ footer p {
 
 /* 背景 */
 .parallax-layer:nth-child(1) {
-    background-image: url('/bianca/images/IMG-1.png');
+    background-image: url('/images/IMG-1.png');
     position: absolute; /* 絕對定位 */
     top: 0;
     left: 0;
@@ -154,7 +154,7 @@ footer p {
 
 /* 手 */
 .parallax-layer:nth-child(2) {
-    background-image: url('/bianca/images/IMG-2.png');
+    background-image: url('/images/IMG-2.png');
     position: absolute; /* 絕對定位 */
     top: -30;
     left: 0;
@@ -165,7 +165,7 @@ footer p {
 
 /* 兔子 */
 .parallax-layer:nth-child(3) {
-    background-image: url('/bianca/images/IMG-3.png');
+    background-image: url('/images/IMG-3.png');
     position: absolute; /* 絕對定位 */
     top: -15%;
     left: 0;
@@ -176,7 +176,7 @@ footer p {
 
 /* 人 */
 .parallax-layer:nth-child(4) {
-    background-image: url('/bianca/images/IMG-4.png');
+    background-image: url('/images/IMG-4.png');
     position: absolute; /* 絕對定位 */
     top: -5%;
     left: 0;

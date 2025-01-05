@@ -7,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入自定義樣式，定義額外的視覺效果 -->
     <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
     <!-- 導覽列區塊 -->
@@ -82,7 +85,7 @@
                     <div v-for="item in video" class="col-md-4 text-center">
                         <a :href="item.yt" target="_blank">
                             <div class="service-box">
-                                <img :src="'/bianca/images/'+item.img" class="card-img-top" alt="作品圖片">
+                                <img :src="'/images/'+item.img" class="card-img-top" alt="作品圖片">
                                 <i class="bi bi-globe service-icon"></i>
                                 <h3>{{item.title}}</h3>
                                 <p>{{item.text}}</p>
@@ -133,7 +136,7 @@
                 <div class="row" id="IMG">
                     <div v-for="item in IMG" class="col-md-4 text-center">
                             <div class="service-box">
-                                <img :src="'/bianca/images/'+item.pic" class="card-img-top" alt="作品圖片">
+                                <img :src="'/images/'+item.pic" class="card-img-top" alt="作品圖片">
                                 <i class="bi bi-gear service-icon"></i>
                                 <h3>{{item.title}}</h3>
                                 <p>{{item.text}}</p>
@@ -247,7 +250,7 @@
                 <div class="row" id="mod">
                     <div v-for="item in mod" class="col-md-4 text-center">
                         <div class="service-box">
-                            <img :src="'/bianca/images/'+item.view" class="card-img-top" alt="作品圖片">
+                            <img :src="'/images/'+item.view" class="card-img-top" alt="作品圖片">
                             <i class="bi bi-gear service-icon"></i>
                             <h3>{{item.title}}</h3>
                             <p>{{item.text}}</p>
@@ -322,7 +325,7 @@
     <!-- 引入 Bootstrap 的 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="bsvue.js"></script>
     <script src="Script.js"></script>
-    <script src="vue.js"></script>
 </body>
 </html>
