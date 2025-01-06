@@ -1,59 +1,331 @@
-<!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Red Lantern Design</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="stylesheets/screen.css" type="text/css" />
+    <title>Responsive Website</title>
+    <!-- 引入 Bootstrap 樣式表，用於快速建立響應式網頁 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定義樣式，定義額外的視覺效果 -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
-<style>
-    #masthead{
-        color: rgba(0, 238, 255, 0.46);
-    }
-
-</style>
 <body>
-    <header id="masthead" style="color:forestgreen; text-align: right;">
-        <h1><img alt="Red Lantern logo" src="images/rl_logo.png" /></h1>
-        <ul id="nav">
-            <li><a class="active" title="Red Lantern home" href="index.html">Home</a></li>
-            <li><a title="Design services" href="services.html">Services</a></li>
-            <li><a title="Our work" href="portfolio.html">Portfolio</a></li>
-            <li><a title="Contact Red Lantern" href="contact.html">Contact</a></li>
-        </ul>
-    </header>
-    <article id="mainContent">
-        <section id="titleBar">
-            <img alt="tokyo buildings" src="images/tokyo.jpg" />
-            <h1>Red Lantern builds unique interfaces <span class="amp">&amp;</span> user experiences for the web.</h1>
-        </section>
-        <section id="content">
-            <h2>Welcome to the New Red Lantern Design</h2>
-            <p>Red Lantern is a small web design and consulting firm specializing in standards-based web design and development.
-                Our goal is to build simple, beautiful webpages that make your information easy to find and your users happy.</p>
-            <p>If you or your company is interested in working with us, please check out our portfolio of design and branding
-                work and contact us with your project details. We look forward to hearing from you and making your presence
-                on the web a little simpler and easier to find.</p>
-            <ul id="link-list">
-                <li><a title="View our portfolio" href="#">View our full portfolio</a></li>
-                <li><a title="Contact Red Lantern" href="#">Contact Red Lantern</a></li>
-            </ul>
-        </section>
-        <section id="sidebar">
-            <h2>Our Work</h2>
-            <ul id="port">
-                <li><img alt="comp0" src="images/markinjapan.jpg" /></li>
-                <li><img alt="comp1" src="images/a2g.jpg" /></li>
-                <li><img alt="comp2" src="images/foobar.jpg" /></li>
-                <li><img alt="comp3" src="images/rpm.jpg" /></li>
-            </ul>
-        </section>
-    </article>
-    <footer id="footer">
-        <p>Copyright &copy; Red Lantern Design, all rights reserved.</p>
-    </footer>
-</body>
+    <!-- 導覽列區塊 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">洪子淨的個人網站</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">聯絡方式</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- 首頁橫幅區塊 -->
+    <header class="hero-section d-flex align-items-center justify-content-center text-center parallax-container">
+        <div class="container position-relative">
+            <h1 class="display-4 text-white">歡迎來到我的網站</h1>
+            <p class="lead text-white">準備好探索我的小宇宙吧</p>
+        </div>
+            <!-- 手 -->
+            <div class="parallax-layer" data-speed="0.6"></div>
+            <!-- 兔子 -->
+            <div class="parallax-layer" data-speed="0.8"></div>
+            <!-- 人 -->
+            <div class="parallax-layer" data-speed="1"></div>
+            <!-- 背景 -->
+            <div class="parallax-layer" data-speed="0"></div>
+        <!-- 文字內容 -->
+    </header>
+
+    <!-- 關於我區塊 -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>關於我</h2>
+            <p class="lead">Something about me</p>
+            <p class="lead">就讀台中科技大學 多媒體設計系</p>
+            <p class="lead">是個宜蘭人 喜歡畫畫 玩遊戲 聽音樂 小動物 打排球</p>
+            <p class="lead">接下來請看看我的作品吧~</p>
+        </div>
+    </section>
+
+   <!-- 作品集區塊 -->
+   <section id="services" class="py-5 bg-light">
+    <div class="container">
+        <!-- Tab 選項 -->
+        <ul class="nav nav-tabs justify-content-center" id="serviceTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <!-- Tab 1：影片製作 -->
+                <button class="nav-link active" id="tab-1" data-bs-toggle="tab" data-bs-target="#content-1" type="button" role="tab" aria-controls="content-1" aria-selected="true">影片製作</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <!-- Tab 2：繪圖作品 -->
+                <button class="nav-link" id="tab-2" data-bs-toggle="tab" data-bs-target="#content-2" type="button" role="tab" aria-controls="content-2" aria-selected="false">繪圖作品</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <!-- Tab 3：3D作品 -->
+                <button class="nav-link" id="tab-3" data-bs-toggle="tab" data-bs-target="#content-3" type="button" role="tab" aria-controls="content-3" aria-selected="false">3D作品</button>
+            </li>
+        </ul>
+
+        <!-- Tab 內容 -->
+        <div class="tab-content mt-4">
+            <!-- 影片製作內容 -->
+            <div class="tab-pane fade show active" id="content-1" role="tabpanel" aria-labelledby="tab-1">
+                <div class="row" id="video">
+
+                    <div v-for="item in video" class="col-md-4 text-center">
+                        <a :href="item.yt" target="_blank">
+                            <div class="service-box">
+                                <img :src="'/images/'+item.img" class="card-img-top" alt="作品圖片">
+                                <i class="bi bi-globe service-icon"></i>
+                                <h3>{{item.title}}</h3>
+                                <p>{{item.text}}</p>
+                            </div>
+                        </a>
+                    </div>    
+
+
+                    <!-- 每一項內容使用 Bootstrap 的網格系統來布局 -->
+
+<!--
+                    <div class="col-md-4 text-center">
+                        <a href="https://www.youtube.com/embed/HRIaX4__Wy0?si=Kem-gSgFGZiTmxL9" target="_blank">
+                            <div class="service-box">
+                                <img src="/bianca/images/img020.jpg" class="card-img-top" alt="作品圖片">
+                                <i class="bi bi-globe service-icon"></i>
+                                <h3>影片製作1</h3>
+                                <p>血藍風暴宣傳片</p>
+                            </div>
+                        </a>
+                    </div>                    
+                    <div class="col-md-4 text-center">
+                        <a href="https://www.youtube.com/embed/XgYEqyGPY-0?si=gYDRgxibB3xOuCDQ" target="_blank">
+                            <div class="service-box">
+                                <img src="/bianca/images/img021.jpg" class="card-img-top" alt="作品圖片">
+                                <i class="bi bi-globe service-icon"></i>
+                                <h3>影片製作2</h3>
+                                <p>水的旅行-手翻書</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://www.youtube.com/embed/DUwa3HBOJVg?si=-uH0RuyfQJ8gIIxu" target="_blank">
+                            <div class="service-box">
+                                <img src="/bianca/images/img022.jpg" class="card-img-top" alt="作品圖片">
+                                <i class="bi bi-globe service-icon"></i>
+                                <h3>影片製作3</h3>
+                                <p>自畫像拼豆</p>
+                            </div>
+                        </a>
+                    </div>
+-->
+                </div>
+            </div>
+            
+            <!-- 繪圖作品內容 -->
+            <div class="tab-pane fade" id="content-2" role="tabpanel" aria-labelledby="tab-2">
+                <div class="row" id="IMG">
+                    <div v-for="item in IMG" class="col-md-4 text-center">
+                            <div class="service-box">
+                                <img :src="'/images/'+item.pic" class="card-img-top" alt="作品圖片">
+                                <i class="bi bi-gear service-icon"></i>
+                                <h3>{{item.title}}</h3>
+                                <p>{{item.text}}</p>
+                            </div>
+                        </a>
+                    </div>  
+
+
+<!--                <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img001.JPG" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品1</h3>
+                            <p>排球帥帥圖</p>
+                        </div>
+                    </div>               
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img002.JPG" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品2</h3>
+                            <p>蕉蕉子的生日賀圖</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img003.JPG" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品3</h3>
+                            <p>舒華大美女</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img004.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品4</h3>
+                            <p>大一的角色設計:Una</p>
+                        </div>
+                    </div>      
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img005.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品5</h3>
+                            <p>大一繪話課的動作拆解</p>
+                        </div>
+                    </div>   
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img006.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品6</h3>
+                            <p>貓貓</p>
+                        </div>
+                    </div>    
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img007.gif" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品7</h3>
+                            <p>大二的遊戲專題-攻擊</p>
+                        </div>
+                    </div>  
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img008.gif" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品8</h3>
+                            <p>大二的遊戲專題-護盾</p>
+                        </div>
+                    </div>   
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img009.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品9</h3>
+                            <p>大二動畫製作的小煤炭</p>
+                        </div>
+                    </div>   
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img010.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品10</h3>
+                            <p>小煤炭離家出走</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img011.png" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品11</h3>
+                            <p>高中創作的角色</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img012.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>繪圖作品12</h3>
+                            <p>大一基礎設計的色彩調和</p>
+                        </div>
+                    </div>*/
+-->
+
+                </div>
+            </div>
+            <!-- 3D作品內容 -->
+            <div class="tab-pane fade" id="content-3" role="tabpanel" aria-labelledby="tab-3">
+                <div class="row" id="mod">
+                    <div v-for="item in mod" class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img :src="'/images/'+item.view" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.text}}</p>
+                        </div>
+                    </a>
+                </div>  
+
+                    
+ <!--                   <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img014.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D-1</h3>
+                            <p>檯燈渲染-1</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img015.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D-2</h3>
+                            <p>檯燈渲染-2</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img016.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D-3</h3>
+                            <p>海格的家-白膜</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img017.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D-4</h3>
+                            <p>海格的家-渲染</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img018.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D-5</h3>
+                            <p>水壺渲染</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service-box">
+                            <img src="/bianca/images/img019.jpg" class="card-img-top" alt="作品圖片">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>一點點3D-6</h3>
+                            <p>武器渲染</p>
+                        </div>
+                    </div>
+-->
+                    <!-- 更多作品內容 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 聯絡方式 -->
+    <footer class="text-white text-center py-3">
+        <p>&copy; 電話:0928329170</p>
+        <p>&copy; email:hongzijing0630@gmail.com</p>
+        <p>&copy; IG:bianca_06_30</p>
+    </footer>
+
+    <!-- 引入 Bootstrap 的 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="bsvue.js"></script>
+    <script src="Script.js"></script>
+</body>
 </html>
