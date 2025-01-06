@@ -21,7 +21,7 @@ var data2 = createApp({
                 {pic:"img002.JPG",title:"繪圖作品",text:"蕉蕉子的生日賀圖"},
                 {pic:"img003.JPG",title:"繪圖作品",text:"舒華大美女"},
                 {pic:"img004.jpg",title:"繪圖作品",text:"大一的角色設計"},
-                {pic:"img005.jpg",title:"繪圖作品",text:"大一繪話課的動作拆解"},
+                {pic:"img005.jpg",title:"繪圖作品",text:"大一繪畫課的動作拆解"},
                 {pic:"img006.jpg",title:"繪圖作品",text:"貓貓"},
                 {pic:"img007.gif",title:"繪圖作品",text:"大二的遊戲專題-攻擊"},
                 {pic:"img008.gif",title:"繪圖作品",text:"大二的遊戲專題-護盾"},
