@@ -73,10 +73,7 @@ p {
     margin-bottom: 15px; /* 圖標與標題的間距 */
 }
 
-/* 聯絡我們區塊樣式 */
-#contact textarea {
-    resize: none; /* 禁止調整文字框大小 */
-}
+
 
 /* 頁腳樣式 */
 footer {
@@ -115,25 +112,29 @@ footer p {
 
 /* 視差容器樣式 */
 .parallax-container {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    perspective: 1px;
+    position: relative; /* 設置相對定位，讓子元素可以基於此容器進行絕對定位 */
+    height: 100vh; /* 設定高度為視窗的 100% 高度 */
+    overflow: hidden; /* 隱藏超出容器範圍的內容，避免多餘的滾動條出現 */
+    perspective: 1px; /* 設置透視效果，用於創建視差滾動效果 */
 }
+
 
 /* 每一層的視差樣式 */
 .parallax-layer {
-   position: absolute;
-   /* top: 0;
-    left: 0;*/
-    width: 100%;
-    height: 120%; /* 確保滾動時無縫顯示 */
-    transform: translate3d(0, 0, 0);
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: absolute; /* 絕對定位，使每一層可相對於父容器自由定位 */
+    /* 
+    top: 0; 
+    left: 0; 
+    */
+    width: 100%; /* 確保每一層的寬度覆蓋整個容器 */
+    height: 120%; /* 高度設定為容器高度的 120%，確保滾動時畫面不會出現空隙 */
+    transform: translate3d(0, 0, 0); /* 強制啟用 GPU 加速，提升視差動畫性能 */
+    
+    background-size: cover; /* 背景圖片填充層，保持寬高比例 */
+    background-position: center; /* 背景圖片置於層的中心位置 */
+    background-repeat: no-repeat; /* 背景圖片不重複，避免出現多重圖片 */
 }
+
 
 .parallax-layer img {
     width: 100%;
